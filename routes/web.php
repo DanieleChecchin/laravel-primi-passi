@@ -19,5 +19,13 @@ use Illuminate\Support\Facades\Route;
 // % una funzione anonima di callback che ritorni qualcosa
 
 Route::get('/home', function () {
-    return view('home');
+
+    $title = 'Hello World !';
+    $list = [
+        'Laravel Primi Passi',
+        'Laravel 10',
+        '21/10/2024'
+    ];
+
+    return view('home', compact('title', 'list'));
 });
