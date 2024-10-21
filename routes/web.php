@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// % Gestore delle rotte, crea una nuova rotta che a seguito di una chiamata GET
+// % all'indirizzo "/about" allora, invoca
+// % una funzione anonima di callback che ritorni qualcosa
+
+Route::get('/home', function () {
+    return view('home');
 });
